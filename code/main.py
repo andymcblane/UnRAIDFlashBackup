@@ -32,7 +32,7 @@ try:
         driver.get(WEB_URL)
 
         driver.find_element("xpath", "//input[@name='username']").send_keys(USERNAME)
-        driver.find_element("xpath", "//input[@name='password']").send_keys(PASSWORD).submit()
+        driver.find_element("xpath", "//input[@name='password']").send_keys(PASSWORD)
         driver.find_element("xpath", "//input[@name='password']").submit()
         driver.get(f"{WEB_URL}/Main/Settings/Flash?name=flash")
         time.sleep(2)
