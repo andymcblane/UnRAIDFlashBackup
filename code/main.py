@@ -36,6 +36,7 @@ try:
         driver.get(f"{WEB_URL}/Main/Settings/Flash?name=flash")
         time.sleep(2)
         driver.find_element("xpath", "//input[@value='Flash backup']").click()
+        time.sleep(60 * 5)
         driver.quit()
         time.sleep(BACKUP_FREQUENCY_SECS)
 
