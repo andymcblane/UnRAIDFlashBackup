@@ -33,6 +33,7 @@ try:
 
         driver.find_element("xpath", "//input[@name='username']").send_keys(USERNAME)
         driver.find_element("xpath", "//input[@name='password']").send_keys(PASSWORD).submit()
+        driver.find_element("xpath", "//input[@name='password']").submit()
         driver.get(f"{WEB_URL}/Main/Settings/Flash?name=flash")
         time.sleep(2)
         driver.find_element("xpath", "//input[@value='Flash backup']").click()
