@@ -7,6 +7,6 @@ services:
       - USERNAME=root
       - PASSWORD=
       - HUB_URL=http://192.168.1.101:4444/wd/hub
-    volumes:
-      - /mnt/user/flash_backups/:/mnt/flash_backups/
+      - WEB_URL=192.168.1.101
+      - BACKUP_FREQUENCY_SECS=86400
     network_mode: bridge

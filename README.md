@@ -7,6 +7,7 @@ Could not find a simple automated solution, so this was created.
 ## Prerequisites 
 
 * Remote Selenium Grid (see https://github.com/SeleniumHQ/docker-selenium)
+  * Mount the flash backup location in selenium
 
 ## Environment Variables 
 
