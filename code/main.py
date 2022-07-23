@@ -9,7 +9,7 @@ try:
     PASSWORD = os.environ["PASSWORD"]
     WEB_URL = os.environ["WEB_URL"]
     HUB_URL = os.environ["HUB_URL"]
-    BACKUP_FREQUENCY_SECS = os.environ["BACKUP_FREQUENCY_SECS"]
+    BACKUP_FREQUENCY_SECS = int(os.environ["BACKUP_FREQUENCY_SECS"])
     while True:
         chrome_options = Options()
         chrome_options.add_experimental_option("prefs", {
