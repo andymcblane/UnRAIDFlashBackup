@@ -1,7 +1,7 @@
 version: "0.1"
 services:
   flash_backup:
-    container_name: flash_backup
+    container_name: UnRAIDFlashBackup
     build: /mnt/user/code/UnRAIDFlashBackup/
     environment:
       - USERNAME=root
@@ -9,4 +9,6 @@ services:
       - HUB_URL=http://192.168.1.101:4444/wd/hub
       - WEB_URL=192.168.1.101
       - BACKUP_FREQUENCY_SECS=86400
+    volumes:
+      - /mnt/user/flash_backups/:/mnt/flash_backups/
     network_mode: bridge
