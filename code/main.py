@@ -4,6 +4,7 @@ import time
 import os 
 
 try:
+    driver = None
     USERNAME = os.environ["USERNAME"]
     PASSWORD = os.environ["PASSWORD"]
     WEB_URL = os.environ["WEB_URL"]
@@ -38,8 +39,12 @@ try:
         time.sleep(2)
         driver.find_element("xpath", "//input[@value='Flash backup']").click()
         time.sleep(60 * 5)
-        driver.quit()
+        try:
+            driver.quit()
+        except Exception as e:
+            print(str(e))
         time.sleep(BACKUP_FREQUENCY_SECS)
 
 finally:
-    driver.quit()
+    if driver is not None:
+        driver.quit()
