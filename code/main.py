@@ -3,8 +3,9 @@ from selenium.webdriver.chrome.options import Options
 import time 
 import os 
 
+driver = None
+
 try:
-    driver = None
     USERNAME = os.environ["USERNAME"]
     PASSWORD = os.environ["PASSWORD"]
     WEB_URL = os.environ["WEB_URL"]
